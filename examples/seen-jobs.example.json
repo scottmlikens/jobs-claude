@@ -1,0 +1,12 @@
+{
+  "_comment": "Dedup ledger format. Copy this to ../seen-jobs.json (git-ignored) on first run. Keyed by LinkedIn job_id. On each run: load this, exclude any job_id already present, then append newly-listed jobs with today's date as first_seen. Managed by the linkedin-job-match skill.",
+  "updated": "2026-01-01",
+  "sessions": [
+    {"date": "2026-01-01", "note": "Example session note: keywords, filters, and what was kept/dropped."}
+  ],
+  "jobs": {
+    "0000000000": {"company": "Example Corp", "title": "Senior Site Reliability Engineer", "first_seen": "2026-01-01"},
+    "0000000001": {"company": "Example Staffing (contract)", "title": "AWS Cloud Engineer (contract)", "first_seen": "2026-01-01"},
+    "0000000002": {"company": "Example Corp", "title": "Platform Engineer", "first_seen": "2026-01-01", "status": "applied 2026-01-02"}
+  }
+}
