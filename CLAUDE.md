@@ -17,27 +17,12 @@ the "company" is the middleman, so the listing can't be applied to directly and
 duplicates a real posting elsewhere. LinkedIn offers no way to filter them out,
 so we do it here.
 
-**Recruiters / aggregators / job-board reposters** (the "company" is a middleman,
-not the actual employer):
-
-- **Ladders** (theladders.com) — job-board reposter; pushes a resume-review upsell.
-- **Jobgether** — aggregator / reposter (posts say "listed on behalf of a partner company, who manages all applications and next steps").
-- **RemoteHunter** — recruiter listing.
-- **Piper Companies** — staffing agency.
-- **Remote Talent** — recruiter / agency.
-- **TalentHop** — recruiter / agency.
-- **Doghouse Recruitment** — recruiter.
-- **Recruiting from Scratch** — recruiter.
-- **ByteSearch** — recruiter.
-- **GeorgiaTEK Systems** — staffing agency.
-- **GigFinder.ai** — job-search aggregator; reposts other companies' listings under its own name.
-
-**Roles requiring a security clearance** the candidate can't obtain (US-government /
-DoD work needing US citizenship + an active clearance) — exclude, since they can't
-qualify. Example employers seen: **Oddball**, **Defense Unicorns**.
-
-**Employers you're personally not interested in:** keep that list in
-`CLAUDE.local.md` (it's a personal preference, not a rule worth publishing).
+**The specific named blocklist — which companies to drop, and why — lives in
+`CLAUDE.local.md`** (git-ignored, auto-loaded alongside this file). It covers
+recruiters / aggregators / job-board reposters, employers requiring a security
+clearance the candidate can't obtain, and employers the candidate is personally
+not interested in. Load it each run and drop anything it names. This file keeps
+only the generic method (below); the named "who" stays local and personal.
 
 ### Aggregator tells (drop these even if the company isn't listed above)
 
@@ -58,8 +43,8 @@ When a listing from a blacklisted source (or matching a tell above) appears:
 - In the run summary, note how many rows were dropped and which source(s), so
   the exclusion is visible rather than silent.
 
-To blacklist another source later, add it to the list above with a one-line
-reason.
+To block another source later, add it to the blocklist in `CLAUDE.local.md`
+with a one-line reason.
 
 ## Active — applications / interviews in progress (do not re-surface)
 
@@ -117,7 +102,7 @@ Only surface roles Scott can actually hold from **Salem, Oregon**. This is a
   drop obvious off-target noise (AI/ML engineer, data engineer, mainframe,
   fullstack, generic "Software Engineer", ServiceNow/Guidewire, game-engine), and
   still flag onsite-disguised-as-remote and layered/third-party payroll.
-- The staffing blacklist in "Excluded sources" **still applies to the full-time
+- The staffing blacklist (in `CLAUDE.local.md`) **still applies to the full-time
   section** — the contract carve-out does not extend to full-time roles.
 - Contract roles can be surfaced at title/rate/agency level when volume is high;
   note they're title-level and offer to deep-verify specific ones.
@@ -137,6 +122,6 @@ Only surface roles Scott can actually hold from **Salem, Oregon**. This is a
 
 - The candidate profile and full review workflow live in the `linkedin-job-match`
   skill (`skills/linkedin-job-match/SKILL.md`).
-- To blacklist another company, add it under the appropriate heading above with a
+- To block another company, add it to the blocklist in `CLAUDE.local.md` with a
   one-line reason. Distinguish middlemen (recruiters/aggregators) from real
-  employers you simply aren't interested in (those go in `CLAUDE.local.md`).
+  employers you simply aren't interested in — both live in `CLAUDE.local.md`.
