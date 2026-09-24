@@ -45,8 +45,11 @@ the freshest) unless the user insists on a strict band; tag each row's age.
 Most promoted reposts are 4–7 days old and fall out of the window automatically.
 
 **Remote rule:** default to remote-only; include on-site/hybrid only if in Salem,
-OR. Watch details for residency constraints (state lists, specific time zones,
-US-citizen/clearance) and flag them — several "remote" roles exclude Oregon.
+OR. **Oregon eligibility is a DROP rule (2026-09-24):** omit any role that
+excludes Oregon, lists eligible states without Oregon, or restricts to a
+timezone/region excluding Pacific (e.g. "Eastern US only", "locals in DC/VA/MD").
+Keep generic nationwide "US Remote" (Oregon included by default). Still flag
+US-citizen/clearance separately. Note the Oregon-ineligible drop count.
 
 ## Step 1 — Load the candidate profile
 

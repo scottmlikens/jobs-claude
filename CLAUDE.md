@@ -88,6 +88,22 @@ the board** so they can be weighed, even when the underlying role is a good fit:
 These are caveats like the degree/clearance/timezone flags, not automatic
 exclusions.
 
+## Location / remote eligibility (Oregon)
+
+Only surface roles Scott can actually hold from **Salem, Oregon**. This is a
+**drop rule**, not a flag (changed 2026-09-24):
+
+- **DROP** any posting that explicitly **excludes Oregon**, enumerates eligible
+  states/regions where **Oregon isn't listed**, or restricts to a
+  timezone/region that excludes Pacific/Oregon (e.g. "Eastern US only", "locals
+  in DC/VA/MD", "must sit in EST/CST").
+- **Keep** generic nationwide **"US Remote"** with no state list — Oregon is
+  included by default there.
+- When the metadata is ambiguous (no state list shown), keep it but verify
+  against `get_job_details` before recommending; drop if the body reveals an
+  Oregon-excluding state list.
+- Note the count of Oregon-ineligible drops in the run summary.
+
 ## Daily board format
 
 - **One combined board** per run: include **both full-time and contract** roles in
